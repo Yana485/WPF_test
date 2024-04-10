@@ -1,9 +1,9 @@
 ﻿<Window x:Class="ThreeDScene.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="3D Scene" Height="1000" Width="1500">
+        Title="3D Scene" Height="800" Width="1000">
     <Grid>
-        <Viewport3D Margin="-10,-61,10,61">
+        <Viewport3D Margin="-10,-61,10,0">
             <Viewport3D.Camera>
                 <!-- Встановлення камери - перспективна проєкція -->
                 <PerspectiveCamera Position="0,0,5" LookDirection="0,0,-1"/>
@@ -24,7 +24,7 @@
                 <ModelVisual3D.Content>
                     <GeometryModel3D>
                         <GeometryModel3D.Geometry>
-                            <MeshGeometry3D Positions="-1,-1,1 1,-1,1 1,1,2"
+                            <MeshGeometry3D Positions="-1,-1,1 1,-1,1 0,1,2"
                                             TriangleIndices="0 1 2"/>
                         </GeometryModel3D.Geometry>
                         <GeometryModel3D.Material>
@@ -41,7 +41,7 @@
                     </GeometryModel3D>
                 </ModelVisual3D.Content>
             </ModelVisual3D>
-            <!-- Зелений квадрат -->
+            <!-- Зелений трикутник -->
             <ModelVisual3D>
                 <ModelVisual3D.Content>
                     <GeometryModel3D>
@@ -68,7 +68,7 @@
                 <ModelVisual3D.Content>
                     <GeometryModel3D>
                         <GeometryModel3D.Geometry>
-                            <MeshGeometry3D Positions="-2,-2,0 1,-1,0 -1,1,0 1,1,0"
+                            <MeshGeometry3D Positions="-2 -1.3,0 1,-1,0 -1,1,0 1,1,0"
                                             TriangleIndices="0 1 2 2 1 3"/>
                         </GeometryModel3D.Geometry>
                         <GeometryModel3D.Material>
